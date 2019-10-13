@@ -18,12 +18,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun check(view: View) {
+    fun check(view : View) {
         val n = number.text.toString().toInt()
         println("number: $n")
         Log.d("MainActivity", "number:" + n)
         val diff = secretNumber.validate(n)
-        var message = "Yes, you got it"
+        var message = getString(R.string.yes_you_got_it)
         if (diff < 0) {
             message = "Bigger"
         } else if (diff > 0) {
